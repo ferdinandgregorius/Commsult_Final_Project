@@ -1,0 +1,7 @@
+2021-10-20 16:29:10,419 [Worker-8: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2021-10-20 16:30:15,839 [Worker-26: Update Maven projects configuration] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2021-10-20 16:30:22,468 [Worker-26: Update Maven projects configuration] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: id.ac.sgu:template:0.0.1-SNAPSHOT @ F:\Temporary\sgu.template-maven\pom.xml.
+2021-10-20 16:30:24,696 [Worker-18: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: id.ac.sgu:template:0.0.1-SNAPSHOT @ F:\Temporary\sgu.template-maven\pom.xml.
+2021-10-20 16:30:26,859 [Worker-26: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /sgu.template-maven/src/main/java
+2021-10-20 16:30:26,860 [Worker-26: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /sgu.template-maven/src/main/resources
+2021-10-20 16:30:27,434 [Worker-26: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /sgu.template-maven/src/test/java
