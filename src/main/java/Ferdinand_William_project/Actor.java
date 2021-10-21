@@ -43,6 +43,7 @@ public class Actor extends Observable{
 			@Override
 			public void run() {
 				while (true) {
+					
 					System.out.println("Window: "+ windowStatus);
 					
 					try {
@@ -63,6 +64,7 @@ public void StartAc() {
 			@Override
 			public void run() {
 				while (true) {
+					
 					System.out.println("AC: " + acStatus);
 					
 					try {
@@ -73,6 +75,8 @@ public void StartAc() {
 				}
 			}
 		});
+		
+		thread.start();
 	}
 	
 }
