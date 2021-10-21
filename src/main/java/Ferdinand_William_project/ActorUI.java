@@ -19,7 +19,7 @@ private JLabel window, ac;
         
         jframe.add(windowLabel);
         
-        window = new JLabel();
+        window = new JLabel("CLOSED");
         window.setBounds(50, 40, 100, 30);
         jframe.add(window);
         
@@ -28,7 +28,7 @@ private JLabel window, ac;
         
         jframe.add(acLabel);
         
-        ac = new JLabel();
+        ac = new JLabel("OFF");
         ac.setBounds(50, 40, 100, 10);
         jframe.add(ac);
         
