@@ -10,6 +10,8 @@ public class WeatherSensor extends Observable {
 	double temperature;
 	double humidity;
 	
+	WeatherTimer weatherTimer = new WeatherTimer();
+	
 	ActorUI actorUI = new ActorUI();
 	Actor actor = new Actor("CLOSED", "OFF");
 
@@ -40,7 +42,9 @@ public class WeatherSensor extends Observable {
 		Thread t = new Thread(new Runnable() {
 			@Override
 			public void run() {
+				weatherTimer.start();
 				while (true) {
+					
 					setWindSpeed(100 * rand.nextDouble());
 					System.out.print("Wind Speed: " + windSpeed + ", ");
 					

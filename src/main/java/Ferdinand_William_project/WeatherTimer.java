@@ -9,7 +9,7 @@ public class WeatherTimer {
 	TimerTask task = new TimerTask() {
 		public void run() {
 			secondsPassed++;
-			System.out.print("Hours passed: " + secondsPassed + ", ");
+			System.out.print("Hours passed: " + secondsPassed + ":00, ");
 		}
 	};
 
