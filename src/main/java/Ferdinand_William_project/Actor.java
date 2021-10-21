@@ -3,12 +3,12 @@ package Ferdinand_William_project;
 import java.util.Observable;
 import java.util.Observer;
 
-public class WindowActor extends Observable{
+public class Actor extends Observable{
 	
 	double windSpeed;
 	
 	
-	public WindowActor(double windSpeed) {
+	public Actor(double windSpeed) {
 		this.windSpeed = windSpeed;
 	}
 	
