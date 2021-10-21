@@ -4,7 +4,7 @@ public class MainRunner {
 	public static void main(String[] args) {
 		
 		WeatherSensorUI w = new WeatherSensorUI();
-
+		WeatherTimer wt = new WeatherTimer();
 		WeatherSensor ws = new WeatherSensor(25, 10, 20);
 		
 		ws.registerObserver(w);
@@ -12,5 +12,7 @@ public class MainRunner {
 		ws.startHumiditySensor();
 		ws.startWindSpeedSensor();
 		ws.startTemperatureSensor();
+		
+		wt.start();
 	}
 }

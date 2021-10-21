@@ -18,45 +18,37 @@ public class WeatherSensorUI implements Observer {
 		j.add(wind);
 
 		value = new JLabel("99999");
-		value.setBounds(50, 100, 200, 30);
+		value.setBounds(150, 40, 200, 40);
 		j.add(value);
 
 		j.setSize(400, 400);
 		j.setLayout(null);
 		j.setVisible(true);
-		j.setTitle("My Wind Speed Sensor");
-
-		// temperature UI
-		JFrame g = new JFrame();
+		j.setTitle("The Weather Sensor");
 
 		JLabel temperature = new JLabel("Temperature: ");
-		temperature.setBounds(50, 40, 200, 40);
-		g.add(temperature);
+		temperature.setBounds(50, 50, 200, 50);
+		j.add(temperature);
 
 		value2 = new JLabel("40");
-		value2.setBounds(50, 100, 200, 30);
-		g.add(value2);
+		value2.setBounds(150, 50, 200, 50);
+		j.add(value2);
 
-		g.setSize(400, 400);
-		g.setLayout(null);
-		g.setVisible(true);
-		g.setTitle("My Temperature sensor");
-
-		// humidity UI
-		JFrame f = new JFrame();
+		j.setSize(400, 400);
+		j.setLayout(null);
+		j.setVisible(true);
 
 		JLabel humidity = new JLabel("Humidity: ");
-		humidity.setBounds(50, 40, 200, 40);
-		f.add(humidity);
+		humidity.setBounds(50, 60, 200, 60);
+		j.add(humidity);
 
 		value3 = new JLabel("98");
-		value3.setBounds(50, 100, 200, 30);
-		f.add(value3);
+		value3.setBounds(150, 60, 200, 60);
+		j.add(value3);
 
-		f.setSize(400, 400);
-		f.setLayout(null);
-		f.setVisible(true);
-		f.setTitle("My Humidity sensor");
+		j.setSize(400, 400);
+		j.setLayout(null);
+		j.setVisible(true);
 	}
 
 	@Override
