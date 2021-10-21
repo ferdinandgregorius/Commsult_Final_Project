@@ -5,23 +5,34 @@ import java.util.Observer;
 
 public class Actor extends Observable{
 	
-	double windSpeed;
+	String windowStatus;
+	String acStatus;
 	
-	
-	public Actor(double windSpeed) {
-		this.windSpeed = windSpeed;
-	}
-	
-	public double getWindSpeed() {
-		return windSpeed;
+	public Actor(String windowStatus, String acStatus) {
+		this.windowStatus = windowStatus;
+		this.acStatus = acStatus;
 	}
 	
 	public void registerObserver(Observer o) {
 		addObserver(o);
 	}
 	
-	public void setWindSpeed(double windSpeed) {
-		this.windSpeed=windSpeed;
+	public String getWindowStatus() {
+		return windowStatus;
+	}
+	
+	public void setWindowStatus(String windowStatus) {
+		this.windowStatus = windowStatus;
+		setChanged();
+		notifyObservers(this);
+	}
+	
+	public String getAcStatus() {
+		return acStatus;
+	}
+	
+	public void setAcStatus(String acStatus) {
+		this.acStatus = acStatus;
 		setChanged();
 		notifyObservers(this);
 	}
@@ -32,11 +43,8 @@ public class Actor extends Observable{
 			@Override
 			public void run() {
 				while (true) {
-					if(windSpeed>13.5) {
-						System.out.println("Windows: OPEN");
-					}else {
-						System.out.println("Windows: CLOSED");
-					}
+					System.out.println("Window: "+ windowStatus);
+					System.out.println("AC: " + acStatus);
 				}
 			}
 		});
