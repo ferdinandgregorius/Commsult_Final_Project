@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>id.ac.sgu</groupId>
-	<artifactId>template</artifactId>
+	<artifactId>CommsultProject</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>template</name>
+	<name>Commsult Project</name>
 	<url>http://http://www.sgu.ac.id/</url>
 
 	<properties>
@@ -19,6 +19,7 @@
 		<project.scm.id>git</project.scm.id>
 		<log4j.version>2.13.3</log4j.version>
 		<junit.jupiter.version>5.7.0</junit.jupiter.version>
+		<akka.version>2.6.17</akka.version>
 	</properties>
 
 	<dependencies>
@@ -63,6 +64,23 @@
 			<version>4.2</version>
 			<scope>test</scope>
 		</dependency>
+		
+		<dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-actor-typed_2.13</artifactId>
+            <version>${akka.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-actor-testkit-typed_2.13</artifactId>
+            <version>${akka.version}</version>
+            <scope>test</scope>
+        </dependency>
 
 	</dependencies>
 
