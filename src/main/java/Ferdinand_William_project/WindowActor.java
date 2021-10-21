@@ -1,5 +1,6 @@
 package Ferdinand_William_project;
 
-public class Actor{
+public class WindowActor{
+	
 	
 }
