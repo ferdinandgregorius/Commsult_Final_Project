@@ -14,6 +14,11 @@ private JLabel window, ac;
         
         JFrame jframe= new JFrame();
         
+        jframe.setTitle("Window and AC Status");
+        jframe.setSize(400, 400);
+        jframe.setLayout(null);
+        jframe.setVisible(true);
+        
         JLabel windowLabel = new JLabel("Window: ");
         windowLabel.setBounds(50, 40, 200, 40);
         
@@ -31,11 +36,6 @@ private JLabel window, ac;
         ac = new JLabel("OFF");
         ac.setBounds(150, 40, 200, 50);
         jframe.add(ac);
-        
-        jframe.setSize(400, 400);
-        jframe.setLayout(null);
-        jframe.setVisible(true);
-        jframe.setTitle("Window and AC Status");
     }
     
     @Override
