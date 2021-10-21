@@ -31,7 +31,7 @@ public class WindowActor extends Observable{
 			@Override
 			public void run() {
 				while (true) {
-					System.out.println("Window: "+ windowStatus);
+					System.out.println("Window: " + windowStatus);
 				}
 			}
 		});
