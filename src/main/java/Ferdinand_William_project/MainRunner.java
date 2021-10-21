@@ -13,15 +13,13 @@ public class MainRunner {
 		ws.startWindSpeedSensor();
 		ws.startTemperatureSensor();
 		
-		String windowStatus, acStatus;
-		
-		ActorUI au = new ActorUI();
-		
-		Actor a = new Actor("CLOSED", "OFF");
-		
-		a.registerObserver(au);
-		
-		a.startWindow();
-		a.StartAc();
+//		ActorUI au = new ActorUI();
+//		
+//		Actor a = new Actor("CLOSED", "OFF");
+//		
+//		a.registerObserver(au);
+//		
+//		a.startWindow();
+//		a.StartAc();
 	}
 }

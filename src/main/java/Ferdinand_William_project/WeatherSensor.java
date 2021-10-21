@@ -9,6 +9,9 @@ public class WeatherSensor extends Observable {
 	double windSpeed;
 	double temperature;
 	double humidity;
+	
+	ActorUI actorUI = new ActorUI();
+	Actor actor = new Actor("CLOSED", "OFF");
 
 	public WeatherSensor(double windSpeed, double temperature, double humidity) {
 		this.windSpeed = windSpeed;
@@ -41,6 +44,14 @@ public class WeatherSensor extends Observable {
 					setWindSpeed(100 * rand.nextDouble());
 					System.out.println("Wind Speed: " + windSpeed);
 					
+					if(getWindSpeed()>13.5) {
+						actor.setWindowStatus("CLOSED");
+					}else {
+						actor.setWindowStatus("OPENED");
+					}
+					
+					actor.startWindow();
+					
 					try {
 						Thread.sleep(1000);
 					} catch (InterruptedException e) {
@@ -57,7 +68,7 @@ public class WeatherSensor extends Observable {
 	}
 
 	public void setTemperature(double temperature) {
-		this.temperature = temperature;
+		this.temperature= temperature;
 		setChanged();
 		notifyObservers(this);
 	}
@@ -72,6 +83,14 @@ public class WeatherSensor extends Observable {
 				while (true) {
 					setTemperature(100 * rand.nextDouble());
 					System.out.println("Temperature: " + temperature);
+					
+					if(getTemperature()>30.0) {
+						actor.setAcStatus("ON");
+					}else {
+						actor.setAcStatus("OFF");
+					}
+					
+					actor.StartAc();
 					
 					try {
 						Thread.sleep(1000);

@@ -24,7 +24,7 @@ private JLabel window, ac;
         jframe.add(window);
         
         JLabel acLabel = new JLabel("AC: ");
-        windowLabel.setBounds(50, 40, 200, 20);
+        acLabel.setBounds(50, 40, 200, 20);
         
         jframe.add(acLabel);
         
@@ -40,9 +40,9 @@ private JLabel window, ac;
     
     @Override
     public void update(Observable actor, Object args) {
-    	Actor windowActor = (Actor) actor;
+    	Actor actor1 = (Actor) actor;
     	
-    	window.setText(windowActor.getWindowStatus());
-    	ac.setText(windowActor.getAcStatus());
+    	window.setText(actor1.getWindowStatus());
+    	ac.setText(actor1.getAcStatus());
     }
 }
