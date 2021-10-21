@@ -40,6 +40,7 @@ public class WeatherSensor extends Observable {
 				while (true) {
 					setWindSpeed(100 * rand.nextDouble());
 					System.out.println("Wind Speed: " + windSpeed);
+					
 					try {
 						Thread.sleep(1000);
 					} catch (InterruptedException e) {
@@ -71,6 +72,7 @@ public class WeatherSensor extends Observable {
 				while (true) {
 					setTemperature(100 * rand.nextDouble());
 					System.out.println("Temperature: " + temperature);
+					
 					try {
 						Thread.sleep(1000);
 					} catch (InterruptedException e) {
