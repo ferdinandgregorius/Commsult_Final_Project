@@ -9,9 +9,9 @@ public class MainRunner {
 		
 		ws.registerObserver(w);
 
-		ws.startHumiditySensor();
-		ws.startWindSpeedSensor();
-		ws.startTemperatureSensor();
+		//ws.startHumiditySensor();
+		ws.startWeatherSensor();
+		//ws.startTemperatureSensor();
 		
 		wt.start();
 	}

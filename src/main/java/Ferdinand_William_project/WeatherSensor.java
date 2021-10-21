@@ -33,7 +33,7 @@ public class WeatherSensor extends Observable {
 		notifyObservers(this);
 	}
 
-	public void startWindSpeedSensor() {
+	public void startWeatherSensor() {
 
 		Random rand = new Random();
 
@@ -42,7 +42,7 @@ public class WeatherSensor extends Observable {
 			public void run() {
 				while (true) {
 					setWindSpeed(100 * rand.nextDouble());
-					System.out.println("Wind Speed: " + windSpeed);
+					System.out.print("Wind Speed: " + windSpeed + ", ");
 					
 					if(getWindSpeed()>13.5) {
 						actor.setWindowStatus("CLOSED");
@@ -50,7 +50,22 @@ public class WeatherSensor extends Observable {
 						actor.setWindowStatus("OPENED");
 					}
 					
+					actor.registerObserver(actorUI);
 					actor.startWindow();
+					
+					setTemperature(100 * rand.nextDouble());
+					System.out.print("Temperature: " + temperature + ", ");
+					
+					if(getTemperature()>30.0) {
+						actor.setAcStatus("ON");
+					}else {
+						actor.setAcStatus("OFF");
+					}
+					
+					actor.StartAc();
+					
+					setHumidity(100 * rand.nextDouble());
+					System.out.print("Humidity: " + humidity + ", ");
 					
 					try {
 						Thread.sleep(1000);
@@ -73,35 +88,35 @@ public class WeatherSensor extends Observable {
 		notifyObservers(this);
 	}
 
-	public void startTemperatureSensor() {
-
-		Random rand = new Random();
-
-		Thread t = new Thread(new Runnable() {
-			@Override
-			public void run() {
-				while (true) {
-					setTemperature(100 * rand.nextDouble());
-					System.out.println("Temperature: " + temperature);
-					
-					if(getTemperature()>30.0) {
-						actor.setAcStatus("ON");
-					}else {
-						actor.setAcStatus("OFF");
-					}
-					
-					actor.StartAc();
-					
-					try {
-						Thread.sleep(1000);
-					} catch (InterruptedException e) {
-						e.printStackTrace();
-					}
-				}
-			}
-		});
-		t.start();
-	}
+//	public void startTemperatureSensor() {
+//
+//		Random rand = new Random();
+//
+//		Thread t = new Thread(new Runnable() {
+//			@Override
+//			public void run() {
+//				while (true) {
+//					setTemperature(100 * rand.nextDouble());
+//					System.out.println("Temperature: " + temperature);
+//					
+//					if(getTemperature()>30.0) {
+//						actor.setAcStatus("ON");
+//					}else {
+//						actor.setAcStatus("OFF");
+//					}
+//					
+//					actor.StartAc();
+//					
+//					try {
+//						Thread.sleep(1000);
+//					} catch (InterruptedException e) {
+//						e.printStackTrace();
+//					}
+//				}
+//			}
+//		});
+//		t.start();
+//	}
 
 	public double getHumidity() {
 		return humidity;
@@ -113,24 +128,24 @@ public class WeatherSensor extends Observable {
 		notifyObservers(this);
 	}
 
-	public void startHumiditySensor() {
-
-		Random rand = new Random();
-
-		Thread t = new Thread(new Runnable() {
-			@Override
-			public void run() {
-				while (true) {
-					setHumidity(100 * rand.nextDouble());
-					System.out.println("Humidity: " + humidity);
-					try {
-						Thread.sleep(1000);
-					} catch (InterruptedException e) {
-						e.printStackTrace();
-					}
-				}
-			}
-		});
-		t.start();
-	}
+//	public void startHumiditySensor() {
+//
+//		Random rand = new Random();
+//
+//		Thread t = new Thread(new Runnable() {
+//			@Override
+//			public void run() {
+//				while (true) {
+//					setHumidity(100 * rand.nextDouble());
+//					System.out.println("Humidity: " + humidity);
+//					try {
+//						Thread.sleep(1000);
+//					} catch (InterruptedException e) {
+//						e.printStackTrace();
+//					}
+//				}
+//			}
+//		});
+//		t.start();
+//	}
 }
