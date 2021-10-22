@@ -74,7 +74,7 @@ public class WeatherSensor extends Observable {
 					}
 					
 					actor.registerObserver(actorUI);
-					actor.startWindow();
+					//actor.startWindow();
 					
 					setTemperature(100 * rand.nextDouble());
 					
@@ -84,7 +84,8 @@ public class WeatherSensor extends Observable {
 						actor.setAcStatus("OFF");
 					}
 					
-					actor.StartAc();
+					//actor.StartAc();
+					actor.startActors();
 					
 					setHumidity(100 * rand.nextDouble());
 					
