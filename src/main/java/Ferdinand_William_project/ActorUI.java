@@ -10,7 +10,6 @@ public class ActorUI implements Observer {
 private JLabel window, ac;
     
     public ActorUI() {
-        //UI for actor, may be combined with WeatherSensorUI later on
         
         JFrame jframe= new JFrame();
         

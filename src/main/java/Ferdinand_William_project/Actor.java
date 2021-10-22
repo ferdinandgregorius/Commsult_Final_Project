@@ -45,7 +45,6 @@ public class Actor extends Observable{
 				while (true) {
 					
 					setWindowStatus(windowStatus);
-					System.out.print("Window: "+ windowStatus + ", ");
 					
 					try {
 						Thread.sleep(1000);
@@ -67,8 +66,6 @@ public void StartAc() {
 				while (true) {
 					
 					setAcStatus(acStatus);
-					System.out.print("AC: " + acStatus);
-					System.out.println();
 					
 					try {
 						Thread.sleep(1000);

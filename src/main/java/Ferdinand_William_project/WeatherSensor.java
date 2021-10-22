@@ -66,7 +66,6 @@ public class WeatherSensor extends Observable {
 				while (true) {
 					
 					setWindSpeed(100 * rand.nextDouble());
-					System.out.print("Wind Speed: " + windSpeed + ", ");
 					
 					if(getWindSpeed()>13.5) {
 						actor.setWindowStatus("CLOSED");
@@ -78,7 +77,6 @@ public class WeatherSensor extends Observable {
 					actor.startWindow();
 					
 					setTemperature(100 * rand.nextDouble());
-					System.out.print("Temperature: " + temperature + ", ");
 					
 					if(getTemperature()>30.0) {
 						actor.setAcStatus("ON");
@@ -89,7 +87,12 @@ public class WeatherSensor extends Observable {
 					actor.StartAc();
 					
 					setHumidity(100 * rand.nextDouble());
-					System.out.print("Humidity: " + humidity + ", ");
+					
+					WeatherData weatherData = new WeatherData(weatherTimer.getSecondsPassed(),windSpeed, temperature, humidity, actor.getWindowStatus(), actor.getAcStatus());
+		
+					weatherData.WeatherDataList.add(weatherData);
+					weatherData.printWeahterData();
+					
 					
 					try {
 						Thread.sleep(1000);
