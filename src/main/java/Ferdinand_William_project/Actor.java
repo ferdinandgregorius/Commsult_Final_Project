@@ -57,47 +57,4 @@ public class Actor extends Observable{
 		
 		thread.start();
 	}
-	
-//	public void startWindow() {
-//		
-//		Thread thread = new Thread(new Runnable() {
-//			@Override
-//			public void run() {
-//				while (true) {
-//					
-//					setWindowStatus(windowStatus);
-//					
-//					try {
-//						Thread.sleep(1000);
-//					} catch (InterruptedException e) {
-//						e.printStackTrace();
-//					}
-//				}
-//			}
-//		});
-//		
-//		thread.start();
-//	}
-//	
-//public void StartAc() {
-//		
-//		Thread thread = new Thread(new Runnable() {
-//			@Override
-//			public void run() {
-//				while (true) {
-//					
-//					setAcStatus(acStatus);
-//					
-//					try {
-//						Thread.sleep(1000);
-//					} catch (InterruptedException e) {
-//						e.printStackTrace();
-//					}
-//				}
-//			}
-//		});
-//		
-//		thread.start();
-//	}
-	
 }

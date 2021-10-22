@@ -73,9 +73,6 @@ public class WeatherSensor extends Observable {
 						actor.setWindowStatus("OPENED");
 					}
 					
-					actor.registerObserver(actorUI);
-					//actor.startWindow();
-					
 					setTemperature(100 * rand.nextDouble());
 					
 					if(getTemperature()>30.0) {
@@ -84,7 +81,7 @@ public class WeatherSensor extends Observable {
 						actor.setAcStatus("OFF");
 					}
 					
-					//actor.StartAc();
+					actor.registerObserver(actorUI);
 					actor.startActors();
 					
 					setHumidity(100 * rand.nextDouble());

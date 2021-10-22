@@ -7,7 +7,7 @@ import java.util.Observer;
 
 public class ActorUI implements Observer {
 	
-private JLabel window, ac;
+private JLabel label1, label2;
     
     public ActorUI() {
         
@@ -18,30 +18,30 @@ private JLabel window, ac;
         jframe.setLayout(null);
         jframe.setVisible(true);
         
-        JLabel windowLabel = new JLabel("Window: ");
-        windowLabel.setBounds(50, 40, 200, 40);
-        
-        jframe.add(windowLabel);
-        
-        window = new JLabel("CLOSED");
-        window.setBounds(150, 30, 200, 40);
-        jframe.add(window);
-        
         JLabel acLabel = new JLabel("AC: ");
-        acLabel.setBounds(50, 40, 200, 20);
+        acLabel.setBounds(50, 40, 200, 40);
         
         jframe.add(acLabel);
         
-        ac = new JLabel("OFF");
-        ac.setBounds(150, 40, 200, 50);
-        jframe.add(ac);
+        label1 = new JLabel("CLOSED");
+        label1.setBounds(150, 30, 200, 40);
+        jframe.add(label1);
+        
+        JLabel windowLabel = new JLabel("WINDOW: ");
+        windowLabel.setBounds(50, 40, 200, 20);
+        
+        jframe.add(windowLabel);
+        
+        label2 = new JLabel("OFF");
+        label2.setBounds(150, 40, 200, 50);
+        jframe.add(label2);
     }
     
     @Override
     public void update(Observable actor, Object args) {
     	Actor actor1 = (Actor) actor;
     	
-    	window.setText(actor1.getWindowStatus());
-    	ac.setText(actor1.getAcStatus());
+    	label1.setText(actor1.getWindowStatus());
+    	label2.setText(actor1.getAcStatus());
     }
 }
