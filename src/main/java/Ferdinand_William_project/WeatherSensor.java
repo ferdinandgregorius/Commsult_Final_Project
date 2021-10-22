@@ -34,6 +34,26 @@ public class WeatherSensor extends Observable {
 		setChanged();
 		notifyObservers(this);
 	}
+	
+	public double getTemperature() {
+		return temperature;
+	}
+
+	public void setTemperature(double temperature) {
+		this.temperature= temperature;
+		setChanged();
+		notifyObservers(this);
+	}
+
+	public double getHumidity() {
+		return humidity;
+	}
+
+	public void setHumidity(double humidity) {
+		this.humidity = humidity;
+		setChanged();
+		notifyObservers(this);
+	}
 
 	public void startWeatherSensor() {
 
@@ -81,75 +101,4 @@ public class WeatherSensor extends Observable {
 		});
 		t.start();
 	}
-
-	public double getTemperature() {
-		return temperature;
-	}
-
-	public void setTemperature(double temperature) {
-		this.temperature= temperature;
-		setChanged();
-		notifyObservers(this);
-	}
-
-//	public void startTemperatureSensor() {
-//
-//		Random rand = new Random();
-//
-//		Thread t = new Thread(new Runnable() {
-//			@Override
-//			public void run() {
-//				while (true) {
-//					setTemperature(100 * rand.nextDouble());
-//					System.out.println("Temperature: " + temperature);
-//					
-//					if(getTemperature()>30.0) {
-//						actor.setAcStatus("ON");
-//					}else {
-//						actor.setAcStatus("OFF");
-//					}
-//					
-//					actor.StartAc();
-//					
-//					try {
-//						Thread.sleep(1000);
-//					} catch (InterruptedException e) {
-//						e.printStackTrace();
-//					}
-//				}
-//			}
-//		});
-//		t.start();
-//	}
-
-	public double getHumidity() {
-		return humidity;
-	}
-
-	public void setHumidity(double humidity) {
-		this.humidity = humidity;
-		setChanged();
-		notifyObservers(this);
-	}
-
-//	public void startHumiditySensor() {
-//
-//		Random rand = new Random();
-//
-//		Thread t = new Thread(new Runnable() {
-//			@Override
-//			public void run() {
-//				while (true) {
-//					setHumidity(100 * rand.nextDouble());
-//					System.out.println("Humidity: " + humidity);
-//					try {
-//						Thread.sleep(1000);
-//					} catch (InterruptedException e) {
-//						e.printStackTrace();
-//					}
-//				}
-//			}
-//		});
-//		t.start();
-//	}
 }
